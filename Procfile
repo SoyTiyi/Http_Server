@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -cp "target/classes" edu.escuelaing.arep.app.HttpServer
+web: java $JAVA_OPTS -cp "target/classes" package edu.escuelaing.arep.app.DemoServer
