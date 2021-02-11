@@ -10,7 +10,26 @@ import java.io.IOException;
 public class DemoServer {
     public static void main(String[] args) throws IOException {
         port(getPort());
-        File htmlPage = new File(System.getProperty("user.dir"),"src/main/resources/public/index.html");
+        String main = getFile("index.html");
+        get("", (req, resp) -> main);
+        String img = getFile("img.html");
+        get("img", (req , resp) -> img);
+        String css = getFile("index.css");
+        get("css", (req, resp) -> css);
+        String js = getFile("app.js");
+        get("js", (req, resp) -> js);
+        startServer();
+    }
+
+    static int getPort() {
+        if (System.getenv("PORT") != null) {
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 36000;
+    }
+
+    static String getFile(String name) throws IOException {
+        File htmlPage = new File(System.getProperty("user.dir"),"src/main/resources/public/"+name);
         FileReader reader = new FileReader(htmlPage);
         BufferedReader br = new BufferedReader(reader);
         StringBuffer sb = new StringBuffer();
@@ -20,15 +39,6 @@ public class DemoServer {
             sb.append("\n");
         }
         reader.close();
-        get("", (req, resp) -> sb.toString());
-        get("/hello", (req , resp) -> "Hello World mundillo lamda");
-        startServer();
-    }
-
-    static int getPort() {
-        if (System.getenv("PORT") != null) {
-            return Integer.parseInt(System.getenv("PORT"));
-        }
-        return 36000;
+        return sb.toString();
     }
 }

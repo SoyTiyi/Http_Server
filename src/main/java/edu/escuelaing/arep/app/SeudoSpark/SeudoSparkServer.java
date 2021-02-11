@@ -1,5 +1,6 @@
 package edu.escuelaing.arep.app.SeudoSpark;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -18,8 +19,7 @@ public class SeudoSparkServer implements Processor {
     HttpServer server = new HttpServer();
 
     private SeudoSparkServer() {
-        server.registerProcessor("/", this);
-        server.registerProcessor("/Apps",this);
+        server.registerProcessor("/",this);
     }
 
     public static SeudoSparkServer getInstance() {

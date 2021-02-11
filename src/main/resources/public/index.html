@@ -5,11 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <script src="./app.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
+    <title>My Own Server</title>
+   <style>
+       body {
+    background-color: #3e4e50;
+}
+
+
+.container {
+ text-align: center;
+ align-items: center;
+ font-family: 'Hammersmith One', sans-serif;
+ margin: 50px auto;
+}
+
+.title {
+    margin: 10px 15px;
+    border: 1px solid #6c757d;
+    border-radius: 10px;
+    background-color: #6c757d;
+}
+
+.text-title {
+    color: #ffffff;
+}
+
+.text-subtitle {
+    color: #0f4c5c;
+}
+
+.container-input {
+    margin: 100px;
+}
+
+.input {
+    padding: 10px 15px;
+    width: 60%;
+}
+
+.button {
+    background-color: #1985a1;
+    color: white;
+    border: 1px solid #1985a1;
+    padding: 10px 15px;
+    border-radius: 10px;
+    
+}
+   </style>
 </head>
 
 <body>
@@ -19,10 +61,12 @@
             <p class="text-subtitle">This app is a light framework that have the work to function like spark</p>
         </div>
         <div class="container-input">
-            <input id="data" type="text" class="input" name=\"data\" placeholder="write path of the items that you want to see"/>
-            <button class="button" onclick="app.send()">Submit</button>
+            <p>If you want to get a img pls write in the path <b>/img</b></p>
+            <br/>
+            <p>If you want to get the expected css write in the path <b>/css</b></p>
+            <br/>
+            <p>If you want to get the expected js write in the path <b>/js</b></p>
         </div>
-        <div id="response"/>
     </div>
 </body>
 
