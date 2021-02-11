@@ -18,6 +18,7 @@ public class SeudoSparkServer implements Processor {
     HttpServer server = new HttpServer();
 
     private SeudoSparkServer() {
+        server.registerProcessor("/", this);
         server.registerProcessor("/Apps",this);
     }
 

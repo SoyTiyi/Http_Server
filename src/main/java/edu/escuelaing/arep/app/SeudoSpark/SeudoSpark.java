@@ -3,7 +3,6 @@ package edu.escuelaing.arep.app.SeudoSpark;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.function.BiFunction;
-import java.util.function.Supplier;
 
 public class SeudoSpark {
     

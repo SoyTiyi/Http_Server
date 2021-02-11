@@ -8,6 +8,7 @@
     <title>Index</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="./app.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
 </head>
 
@@ -18,9 +19,10 @@
             <p class="text-subtitle">This app is a light framework that have the work to function like spark</p>
         </div>
         <div class="container-input">
-            <input type="text" class="input" placeholder="write path of the items that you want to see"/>
-            <button class="button">Submit</button>
+            <input id="data" type="text" class="input" name=\"data\" placeholder="write path of the items that you want to see"/>
+            <button class="button" onclick="app.send()">Submit</button>
         </div>
+        <div id="response"/>
     </div>
 </body>
 
