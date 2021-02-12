@@ -12,8 +12,6 @@ public class HttpServer {
 
         /**
          * This method handle and implements the http server
-         * @param port
-         * @throws IOException
          */
     public void startServer(int port) throws IOException {
         this.port = port;
