@@ -44,7 +44,7 @@ $ mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.app.DemoServer"
 
 ## Integracion Continua
 
-[![CircleCI](https://circleci.com/gh/SoyTiyi/Http-Server.svg?style=svg)](https://circleci.com/gh/SoyTiyi/Http-Server)
+[![CircleCI](https://circleci.com/gh/SoyTiyi/Http_Server.svg?style=svg)](https://circleci.com/gh/SoyTiyi/Http_Server)
 
 ## Despliegue en Heroku
 
