@@ -10,9 +10,11 @@ public class HttpServer {
 
     Map<String, Processor> routesToProcessors = new HashMap();
 
-        /**
-         * This method handle and implements the http server
-         */
+    /**
+     * This method handle and implements the http server
+     * @param port the port that server runs
+     * @throws IOException Exception 
+     */
     public void startServer(int port) throws IOException {
         this.port = port;
         ServerSocket serverSocket = null;

@@ -36,7 +36,7 @@ public class DemoServer {
      * This method return the file that the user want like String
      * @param name of the file
      * @return String 
-     * @throws IOException
+     * @throws IOException Exception
      */
     static String getFile(String name) throws IOException {
         File htmlPage = new File(System.getProperty("user.dir"),"src/main/resources/public/"+name);
