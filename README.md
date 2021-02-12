@@ -20,13 +20,13 @@ Para clonar el repositorio debemos de correr el siguiente comando en cmd o en la
 git clone https://github.com/SoyTiyi/Http_Server.git
  ```
 
- Y luego entraremos a la carperta LinkedList_AREP
+ Y luego entraremos a la carperta Http_Server
 
 ```sh
 $ cd Http_Server
  ```
 Descargaremos y compilaremos el proyecto con el siguiente comando
-Este comando nos descargara la dependencias necesarias, como lo son JUnit y Spark
+Este comando nos descargara la dependencias necesarias (JUnit)
 
  ```sh
 $ mvn package
@@ -44,7 +44,7 @@ $ mvn exec:java -Dexec.mainClass="edu.escuelaing.arep.app.DemoServer"
 
 ## Integracion Continua
 
-[![CircleCI](https://circleci.com/gh/SoyTiyi/Http-LinkedList.svg?style=svg)](https://circleci.com/gh/SoyTiyi/Http-LinkedList)
+[![CircleCI](https://circleci.com/gh/SoyTiyi/Http-Server.svg?style=svg)](https://circleci.com/gh/SoyTiyi/Http-Server)
 
 ## Despliegue en Heroku
 
