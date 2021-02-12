@@ -21,6 +21,10 @@ public class DemoServer {
         startServer();
     }
 
+    /**
+     * This method set the port where this app runs 
+     * @return port 
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
@@ -28,6 +32,12 @@ public class DemoServer {
         return 36000;
     }
 
+    /**
+     * This method return the file that the user want like String
+     * @param name of the file
+     * @return String 
+     * @throws IOException
+     */
     static String getFile(String name) throws IOException {
         File htmlPage = new File(System.getProperty("user.dir"),"src/main/resources/public/"+name);
         FileReader reader = new FileReader(htmlPage);

@@ -10,6 +10,11 @@ public class HttpServer {
 
     Map<String, Processor> routesToProcessors = new HashMap();
 
+        /**
+         * This method handle and implements the http server
+         * @param port
+         * @throws IOException
+         */
     public void startServer(int port) throws IOException {
         this.port = port;
         ServerSocket serverSocket = null;
@@ -71,18 +76,35 @@ public class HttpServer {
         serverSocket.close();
     }
 
+    /**
+     * Return the port of this server
+     * @return int
+     */
     private int getPort() {
         return port;
     }
 
+    /**
+     * This methos set the port  of the server
+     * @param port int
+     */
     private void setPort(int port) {
         this.port = port;
     }
 
+    /**
+     * This methos register the processor that handle the requests
+     * @param path request path of the client
+     * @param processor procesor that handle the request
+     */
     public void registerProcessor(String path, Processor processor) {
         routesToProcessors.put(path, processor);
     }
 
+    /**
+     * Valid request tamplate
+     * @return String
+     */
     public String validHttpRequest() {
         return "HTTP/1.1 200 OK\r\n" + "Content-Type: text/html\r\n" + "\r\n" + "<!DOCTYPE html>\n" + "<html>\n"
                 + "<head>\n" + "<meta charset=\"UTF-8\">\n" + "<title>Title of the document</title>\n" + "</head>\n"
